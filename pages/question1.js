@@ -15,20 +15,20 @@ export default function Question1() {
 
   return (
     <div>
+      <h1>Question 1</h1>
+      <button className='border rounded p-2 hover:bg-slate-200' onClick={() => setShowPopup(true)}>
+        Show Popup
+      </button>
       {showPopup && (
-        <div className='h-screen w-screen backdrop-brightness-50 flex items-center justify-center'>
+        <div className='fixed top-0 left-0 h-screen w-screen backdrop-brightness-50 flex items-center justify-center'>
           <div className='bg-white rounded p-4'>
             <p>A popup</p>
-            <button className='border rounded p-2 hover:bg-slate-200' onClick={() => setShowPopup(false)}>
+            <button className='border rounded p-2 hover:bg-slate-200 mt-4' onClick={() => setShowPopup(false)}>
               Close
             </button>
           </div>
         </div>
       )}
-      <h1>Question 1</h1>
-      <button className='border rounded p-2 hover:bg-slate-200' onClick={() => setShowPopup(true)}>
-        Show Popup
-      </button>
     </div>
   );
 }
